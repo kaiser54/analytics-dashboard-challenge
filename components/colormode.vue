@@ -12,8 +12,9 @@
 
 <script setup>
 const colorMode = useColorMode();
+colorMode.value = "light"
 
-console.log(colorMode.preference);
+console.log(colorMode);
 </script>
 
 <style>
