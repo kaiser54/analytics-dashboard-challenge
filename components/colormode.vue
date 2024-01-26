@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Color mode: {{ $colorMode.value }}</h1>
-    <select v-model="$colorMode.preference">
+    <select v-model="$colorMode.value">
       <option value="system">System</option>
       <option value="light">Light</option>
       <option value="dark">Dark</option>
@@ -13,6 +13,8 @@
 <script setup>
 const colorMode = useColorMode();
 colorMode.value = "light"
+
+// console.log(colorMode);
 </script>
 
 <style>
