@@ -61,14 +61,22 @@ export const data = {
     ]
 }
 
-
 // Function to generate gradient
 function createGradient() {
-    const ctx = document.createElement('canvas').getContext('2d');
-    const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+    // Check if it's a client-side rendering environment
+    const isClient = typeof window !== 'undefined';
 
-    gradient.addColorStop(0, '#34CAA5'); // Start color
-    gradient.addColorStop(1, 'rgba(52, 202, 165, 0.00)'); // End color with alpha
+    // If it's a client-side rendering environment, use document.createElement
+    if (isClient) {
+        const ctx = document.createElement('canvas').getContext('2d');
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
 
-    return gradient;
+        gradient.addColorStop(0, '#34CAA5'); // Start color
+        gradient.addColorStop(1, 'rgba(52, 202, 165, 0.00)'); // End color with alpha
+
+        return gradient;
+    } else {
+        // If it's not a client-side rendering environment (e.g., during SSR), return a fallback value
+        return null;
+    }
 }
