@@ -77,6 +77,6 @@ function createGradient() {
         return gradient;
     } else {
         // If it's not a client-side rendering environment (e.g., during SSR), return a fallback value
-        return null;
+        return "#34CAA5";
     }
 }
