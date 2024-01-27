@@ -2,7 +2,8 @@
   <div class="class__wrap">
     <colormode />
     <main class="container__wrapper">
-      <CardWrapper>
+      <CardWrapper style="height: 374px;">
+       <div class="platform">
         <header>
           <div class="header__text">Sales Trends</div>
           <div class="sort__select">
@@ -52,6 +53,10 @@
             </div>
           </div>
         </header>
+        <div class="chartt">
+          <BarChart />
+        </div>
+       </div>
       </CardWrapper>
       <div class="crypto__card__wrap">
         <CardWrapper
@@ -280,4 +285,11 @@ const handleOpenSelect = (): void => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.chartt {
+  width: 100%;
+  height: 90%;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+</style>

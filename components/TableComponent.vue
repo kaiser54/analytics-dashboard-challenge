@@ -70,7 +70,7 @@ table {
   margin: 0;
   padding: 0;
   width: 100%;
-  table-layout: fixed;
+  /* table-layout: fixed; */
 }
 
 table caption {
